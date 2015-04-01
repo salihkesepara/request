@@ -8,7 +8,7 @@ angular.module('req.remote', ['req.config', 'req.http'])
     
     function parserCallBack(result) {
       // Parse here!
-      return result;
+      return result.ApiKey;
     }
     
     return http.request(req.login).then(parserCallBack);

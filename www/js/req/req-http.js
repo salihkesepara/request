@@ -6,11 +6,11 @@ angular.module('req.http', [])
   self.request = function (req) {
     var deferred = $q.defer();
       $http(req).
-      success(function (data) {
-        deferred.resolve(data);
+      success(function (result) {
+        deferred.resolve(result);
       }).
-      error(function (data) {
-        deferred.reject(data);
+      error(function (err) {
+        deferred.reject(err);
       });
     return deferred.promise;
   }

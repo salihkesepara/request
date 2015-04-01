@@ -20,7 +20,7 @@ angular.module('starter', ['ionic', 'req.remote'])
 
 .controller('AppCtrl', ['$scope', 'remote', function ($scope, remote) {
   remote.login('salih.kesepara@etiya.com', 'Shooter_13').then(function(result) {
-    $scope.loginResponse = result.ApiKey;
+    $scope.loginResponse = result;
   }, function (err) {
     console.log(err);
     $scope.loginResponse = "Sorry!";
