@@ -31,6 +31,8 @@
         <h1 class="title">Request</h1>
       </ion-header-bar>
       <ion-content>
+        <div ng-hide="loginResponse">Loading...</div>
+        <div ng-show="loginResponse">{{loginResponse}}</div>
       </ion-content>
     </ion-pane>
   </body>
